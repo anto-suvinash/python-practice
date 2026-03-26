@@ -2,22 +2,22 @@ running_total = 0
 
 num_of_friends = int(input("Enter the number of friends splitting the bill: "))
 
-appetizers = float(input("enter the cost of appitizers : "))
-main_courses = folat()
-desserts = 39.39
-drinks = 64.21
+appetizers = float(input("Enter the cost of appitizers : "))
+main_courses = float(input("Enter the cost of Main Courses : "))
+desserts = float(input("Enter the cost of Desserts : "))
+drinks = float(input("Enter the  cost of Drinks  : "))
 
 running_total += appetizers + main_courses + desserts + drinks
-print('Total bill so far:', running_total)
+print('Total bill so far:', round(running_total, 2))
 
-tip = running_total * 0.25
-print('Tip amount:', tip)
+tip_percentage = float(input("Enter the tip percentage (e.g. 10 for 10%): "))
+if tip_percentage < 0:
+    raise ValueError("Tip percentage must be non-negative.")
+tip = running_total * (tip_percentage / 100)
+print("Tip amount:", tip)
 
 running_total += tip
-print('Total with tip:', running_total)
+print('Total with tip:', round(running_total, 2))
 
 final_bill = running_total / num_of_friends
-print('Bill per person:', final_bill)
-
-each_pays = round(final_bill, 2)
-print("Each person pays:", each_pays)
+print('Bill per person:', round(final_bill, 2))

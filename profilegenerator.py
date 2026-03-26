@@ -46,7 +46,7 @@ for key, (pos, _) in positions.items():
 
 position_choice = int(input("Enter the number for your Position: "))
 position, base_salary = positions[position_choice]
-salary = base_salary + (experience_years * 5000)  
+salary = base_salary + (experience_years * 5000)    
 salary = min(salary, 150000)  
 
 employee_card = f'Employee: {full_name} | Age: {employee_age} | Position: {position} | Salary: ₹{salary} | Contact: {employee_contact} | Email: {employee_email}'

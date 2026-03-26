@@ -20,4 +20,4 @@ running_total += tip
 print('Total with tip:', round(running_total, 2))
 
 final_bill = running_total / num_of_friends
-print('Bill per person:', round(final_bill, 2))
+print('Bill per person:', final_bill)
